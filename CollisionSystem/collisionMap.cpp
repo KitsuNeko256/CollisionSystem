@@ -111,17 +111,17 @@ void CollisionMap::collideObjects(CollisionObject* left, CollisionObject* right)
 			collideCircles((CollisionCircle*)left, (CollisionCircle*)right);
 			break;
 		case CollisionObject::Type::SIMPLE_RECTANGLE:
-//			collideCircle_RectSimple((CollisionCircle*)left, (CollisionRectSimple*)right);
+			collideCircle_RectSimple((CollisionCircle*)left, (CollisionRectSimple*)right);
 			break;
 		}
 		break;
 	case CollisionObject::Type::SIMPLE_RECTANGLE:
 		switch (right->getType()) {
 		case CollisionObject::Type::CIRCLE:
-//			collideCircle_RectSimple((CollisionCircle*)right, (CollisionRectSimple*)left);
+			collideCircle_RectSimple((CollisionCircle*)right, (CollisionRectSimple*)left);
 			break;
 		case CollisionObject::Type::SIMPLE_RECTANGLE:
-//			collideRectSimples((CollisionRectSimple*)left, (CollisionRectSimple*)right);
+			collideRectSimples((CollisionRectSimple*)left, (CollisionRectSimple*)right);
 			break;
 		}
 		break;
@@ -136,7 +136,7 @@ void CollisionMap::collideCircles(CollisionCircle* left, CollisionCircle* right)
 	right->addCollisionEvent(left, -midLine);
 }
 
-/*
+
 void CollisionMap::collideRectSimples(CollisionRectSimple* left, CollisionRectSimple* right) {
 	Vector2 midLine = right->getPosition() - left->getPosition();
 	midLine -= Vector2(left->getX() + right->getX(), left->getY() + right->getY());
@@ -146,7 +146,6 @@ void CollisionMap::collideRectSimples(CollisionRectSimple* left, CollisionRectSi
 	left->addCollisionEvent(right, -midLine);
 	right->addCollisionEvent(left, midLine);
 }
-
 void CollisionMap::collideCircle_RectSimple(CollisionCircle* left, CollisionRectSimple* right) {
 	Vector2 midLine = right->getPosition() - left->getPosition();
 	midLine -= Vector2(min(midLine.x, right->getX()), min(midLine.y, right->getY()));
@@ -157,4 +156,3 @@ void CollisionMap::collideCircle_RectSimple(CollisionCircle* left, CollisionRect
 	left->addCollisionEvent(right, -midLine);
 	right->addCollisionEvent(left, midLine);
 }
-*/

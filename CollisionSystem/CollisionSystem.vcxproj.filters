@@ -30,6 +30,9 @@
     <ClInclude Include="CollisionCircle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="CollisionRectSimple.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="ToString.cpp">
@@ -45,6 +48,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="CollisionCircle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionRectSimple.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

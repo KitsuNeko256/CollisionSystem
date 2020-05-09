@@ -91,6 +91,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>C:\Users\Kitsune\Desktop\LABS\Instrument of PO\CollisionSystem\CollisionSystem\Vector2\Vector2\Debug\Vector2.obj;C:\Users\Kitsune\Desktop\LABS\Instrument of PO\CollisionSystem\CollisionSystem\Vector2\Vector2\Debug\Vector2int.obj;C:\Users\Kitsune\Desktop\LABS\Instrument of PO\CollisionSystem\CollisionSystem\Vector3\Vector3\Debug\Vector3.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -138,6 +139,29 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="CollisionCircle.h" />
+    <ClInclude Include="collisionMap.h" />
+    <ClInclude Include="collisionObject.h" />
+    <ClInclude Include="General.h" />
+    <ClInclude Include="ToString.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CollisionCircle.cpp" />
+    <ClCompile Include="collisionMap.cpp" />
+    <ClCompile Include="collisionObject.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="ToString.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Vector2\Vector2\Vector2.vcxproj">
+      <Project>{60d7189a-fb65-444b-9d38-7575e417810f}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\Vector3\Vector3\Vector3.vcxproj">
+      <Project>{9726ea82-6143-409a-be0e-8e99eaed8ee6}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -18,7 +18,7 @@ private:
 
 	void collideCircles(CollisionCircle* left, CollisionCircle* right);
 	void collideRectSimples(CollisionRectSimple* left, CollisionRectSimple* right);
-//	void collideCircle_RectSimple(CollisionCircle* left, CollisionRectSimple* right);
+	void collideCircle_RectSimple(CollisionCircle* left, CollisionRectSimple* right);
 
 public:
 	static CollisionMap* instance;

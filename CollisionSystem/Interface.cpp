@@ -9,6 +9,7 @@ void mainMenu() {
 	string input;
 	cout << "Write 'c' to collide two circles" << endl;
 	cout << "Write 'r' to collide two rectangles" << endl;
+	cout << "Write 'cr' to collide circle with rectangle" << endl;
 	cin >> input;
 	if (input == "c") {
 		double x, y, r;
@@ -43,5 +44,9 @@ void mainMenu() {
 		c1.resolveCollisions();
 		c2.resolveCollisions();
 		cout << "Positions after check: " << toString(c1.getPosition()) << " " << toString(c2.getPosition()) << endl;
+	}
+	if (input == "cr") {
+		cout << "Feature to be made" << endl;
+
 	}
 }

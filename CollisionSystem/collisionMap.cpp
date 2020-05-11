@@ -146,6 +146,7 @@ void CollisionMap::collideRectSimples(CollisionRectSimple* left, CollisionRectSi
 	left->addCollisionEvent(right, -midLine);
 	right->addCollisionEvent(left, midLine);
 }
+
 void CollisionMap::collideCircle_RectSimple(CollisionCircle* left, CollisionRectSimple* right) {
 	Vector2 midLine = right->getPosition() - left->getPosition();
 	midLine -= Vector2(min(midLine.x, right->getX()), min(midLine.y, right->getY()));

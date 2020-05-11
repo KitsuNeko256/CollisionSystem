@@ -157,15 +157,15 @@
     <ClCompile Include="ToString.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="README.md" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Vector2\Vector2\Vector2.vcxproj">
       <Project>{60d7189a-fb65-444b-9d38-7575e417810f}</Project>
     </ProjectReference>
     <ProjectReference Include="..\Vector3\Vector3\Vector3.vcxproj">
       <Project>{9726ea82-6143-409a-be0e-8e99eaed8ee6}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

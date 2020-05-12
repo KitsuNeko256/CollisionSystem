@@ -46,7 +46,21 @@ void mainMenu() {
 		cout << "Positions after check: " << toString(c1.getPosition()) << " " << toString(c2.getPosition()) << endl;
 	}
 	if (input == "cr") {
-		cout << "Feature to be made" << endl;
+		double x, y, r, a, b;
+		cout << "Write x and y coordinates of center and radius of circle" << endl;
+		cin >> x >> y >> r;
+		CollisionCircle c1(r);
+		c1.setPosition(Vector2(x, y));
 
+		cout << "Write x and y coordinates of center and width and height of rectangle" << endl;
+		cin >> x >> y >> a >> b;
+		CollisionRectSimple c2(a, b);
+		c2.setPosition(Vector2(x, y));
+
+		cout << "Positions before check: " << toString(c1.getPosition()) << " " << toString(c2.getPosition()) << endl;
+		CollisionMap::get()->checkAllCollisions();
+		c1.resolveCollisions();
+		c2.resolveCollisions();
+		cout << "Positions after check: " << toString(c1.getPosition()) << " " << toString(c2.getPosition()) << endl;
 	}
 }
